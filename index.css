@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* My colors */
+
+    --orange-button: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lgrey: hsl(217, 12%, 63%);
+    --mgrey: hsl(216, 12%, 54%);
+    --dblue: hsl(213, 19%, 18%);
+    --vdblue: hsl(216, 12%, 8%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(220, 10%, 6%);
+}
+
+.race-card {
+    width: 450px;
+    background-color: hsl(216, 9%, 11%);
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.⭐ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    background-color: var(--dblue);
+
+}
+
+.rate-content h1 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 1rem 0;
+    color: var(--white);
+}
+
+.rate-content p {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22.5px;
+    color: var(--lgrey);
+
+}
+
+div.number-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    background-color: var(--dblue);
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22.5px;
+    color: var(--lgrey);
+    cursor: pointer;
+    margin: 1.5rem 0;
+    transition: 0.3s ease-in ;
+
+}
+.number-container button:hover{
+    background-color: var(--mgrey);
+    color: var(--white);
+}
+
+.submit{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    background-color: var(--orange-button);
+    border: none;
+    outline: none;
+
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.submit:hover{
+    color: var(--orange-button);
+    background-color: var(--white);
+}
+
+
+
+
+/* Thanks Section */
+
+.thanks{
+    width: 450px;
+    background-color: hsl(216, 9%, 11%);
+    border-radius: 25px;
+    padding: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem ;
+    background-color: var(--dblue);
+    margin: 1rem 0;
+
+    color: var(--orange-button);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22.5px;
+}
+
+.thanks-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.thanks-content h1{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 0 1rem 0;
+    color: var(--white);
+    text-align: center;
+}
+
+.thanks-content p{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22.5px;
+    color: var(--lgrey);
+    text-align: center;
+    padding: 0 1.5rem;
+
+}
+
+@media screen and (max-width: 500px) {
+    .race-card,.thanks{
+        width: 80%;
+        padding: 1rem;
+    }
+    .⭐,.number-container button{
+        width: 40px;
+        height: 40px;
+    }
+    .thanks-img img{
+        width: 142px;
+        height: 88px;
+    }
+
+    .rate-content h1{
+        font-size: 26px;
+    }
+    .rate-content p, .thanks-content p{
+        font-size: 13px;
+        line-height: 19.5px;
+    }
+    .number-container button{
+        font-size: 15px;
+        line-height: 22.5px;
+    }
+    .submit{
+        padding: 1rem;
+        font-size: 13px;
+        line-height: 19.5px;
+    }
+    .selected{
+        font-size: 13px;
+        line-height: 19.5px;
+        padding: 0.5rem;
+    }
+    .thanks-content h1{
+        font-size: 26px;
+    }
+}
+    
